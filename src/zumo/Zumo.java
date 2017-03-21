@@ -26,15 +26,21 @@ public class Zumo {
         this.sabor = sabor;
         this.litros_max = litros_max;
     }
-    
+    /**
+     * Peermite consultar el estado actual del deposito.
+     * @return devuelve la cantidad en litros. 
+     */
     /*Método que permite consultar el contenido actual que tiene el deposito*/
     public int obtenerLitros(){
         return litros;
     }
+    /**
+     * Saca el zumo de el deposito si hay dinero suficiente.
+     * @param litros parametro.
+     * @param dinero
+     * @throws Exception salata una excepcion si no hay dinero suficiente.
+     */
     
-    
-    /*Método que permite sacar zumo del deposito siempre y cuando
-    se tenga el dinero suficientes.Este método se probará con JUnit*/
     public void sacarZumo(int litros, int dinero) throws Exception
     {
         if (dinero <= 0) {
@@ -47,7 +53,11 @@ public class Zumo {
         
             this.litros =this.litros + litros;
     }
-
+/**
+ * Rellena el deposito de zumo cuando la capacidadno es total.
+ * @param litros
+ * @throws Exception salta una excepcion si el deposito esta lleno.
+ */
     
     /*Método que permite rellenar el deposito de zumo siempre y cuando
     la capacidad no se sobrepase. Este método sera probado con JUnit.*/
